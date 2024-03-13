@@ -2,14 +2,14 @@
 set -e
 
 # Generate the password the first time
-dash_init 2>/dev/null
-eval `grep rpcpassword $HOME/.dashcore/dash.conf`
+hellar_init 2>/dev/null
+eval `grep rpcpassword $HOME/.hellarcore/hellar.conf`
 rpcpassword1=$rpcpassword
 
 # Generate the password again
-rm ~/.dashcore/dash.conf
-dash_init 2>/dev/null
-eval `grep rpcpassword $HOME/.dashcore/dash.conf`
+rm ~/.hellarcore/hellar.conf
+hellar_init 2>/dev/null
+eval `grep rpcpassword $HOME/.hellarcore/hellar.conf`
 rpcpassword2=$rpcpassword
 
 

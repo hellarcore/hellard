@@ -1,6 +1,6 @@
 [Unit]
-Description=Dashd Docker Container
-Documentation=https://github.com/dashpay/docker-dashd
+Description=Hellard Docker Container
+Documentation=https://github.com/hellarpay/docker-hellard
 After=network.target docker.socket
 Requires=docker.socket
 
@@ -9,13 +9,13 @@ RestartSec=10
 Restart=always
 
 # Modify IP6_PREFIX to match network config
-Environment="NAME=dashd"
-Environment="DATA_VOL=dashd-data"
-Environment="IMG=dashpay/dashd:latest"
-Environment="PORT=9999:9999/tcp"
+Environment="NAME=hellard"
+Environment="DATA_VOL=hellard-data"
+Environment="IMG=hellarpay/hellard:latest"
+Environment="PORT=7778:7778/tcp"
 
 # To override environment variables, use local configuration directory:
-# /etc/systemd/system/docker-dashd.service/local.conf
+# /etc/systemd/system/docker-hellard.service/local.conf
 # http://www.freedesktop.org/software/systemd/man/systemd.unit.html
 
 # Clean-up bad state if still hanging around
@@ -25,7 +25,7 @@ ExecStartPre=-/usr/bin/docker rm -f $NAME
 ExecStartPre=-/usr/bin/docker pull $IMG
 
 # Main process
-ExecStart=/usr/bin/docker run --rm -v ${DATA_VOL}:/dash --name ${NAME} -p ${PORT} ${IMG} dash_oneshot $ARGS
+ExecStart=/usr/bin/docker run --rm -v ${DATA_VOL}:/hellar --name ${NAME} -p ${PORT} ${IMG} hellar_oneshot $ARGS
 
 [Install]
 WantedBy=multi-user.target

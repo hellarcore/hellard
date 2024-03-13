@@ -1,4 +1,4 @@
-# Contributing to docker-dashd
+# Contributing to docker-hellard
 
 Community contributions are welcome and help move the project along.  Please review this document before sending any pull requests.
 
@@ -18,9 +18,9 @@ If you have a special feature, you're likely to try but it will likely be reject
 
 ## Tests
 
-In an effort to not repeat bugs (and break less popular features), unit tests are run on [Travis CI](https://travis-ci.org/dashpay/docker-dashd).  The goal of the tests are to be simple and to be placed in the `test` directory where it will be automatically run.
+In an effort to not repeat bugs (and break less popular features), unit tests are run on [Travis CI](https://travis-ci.org/hellarpay/docker-hellard).  The goal of the tests are to be simple and to be placed in the `test` directory where it will be automatically run.
 
-See [test directory](https://github.com/dashpay/docker-dashd/tree/master/test) for details.
+See [test directory](https://github.com/hellarpay/docker-hellard/tree/master/test) for details.
 
 ## Style
 
