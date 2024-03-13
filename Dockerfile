@@ -14,9 +14,9 @@ RUN useradd -u ${USER_ID} -g hellar -s /bin/bash -m -d /hellar hellar
 RUN mkdir /hellar/.hellarcore
 RUN chown hellar:hellar -R /hellar
 
-ADD https://github.com/hellarcore/Wallets/blob/master/Linux64/hellarcore-2.0.4.9-x86_64-linux-gnu.tar.gz /tmp/
-RUN tar -xvf /tmp/hellarcore-*.tar.gz -C /tmp/
-RUN cp /tmp/hellarcore*/bin/*  /usr/local/bin
+COPY hellarcore-2.0.4.9-x86_64-linux-gnu.tar.gz /tmp/
+RUN tar -xvf /tmp/hellarcore-2.0.4.9-x86_64-linux-gnu.tar.gz -C /tmp/
+RUN cp /tmp/hellarcore*/bin/* /usr/local/bin
 RUN rm -rf /tmp/hellarcore*
 
 ADD ./bin /usr/local/bin
