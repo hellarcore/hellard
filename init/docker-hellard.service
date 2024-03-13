@@ -1,6 +1,6 @@
 [Unit]
 Description=Hellard Docker Container
-Documentation=https://github.com/hellarpay/docker-hellard
+Documentation=https://github.com/hellarcore/docker-hellard
 After=network.target docker.socket
 Requires=docker.socket
 
@@ -11,7 +11,7 @@ Restart=always
 # Modify IP6_PREFIX to match network config
 Environment="NAME=hellard"
 Environment="DATA_VOL=hellard-data"
-Environment="IMG=hellarpay/hellard:latest"
+Environment="IMG=hellarcore/hellard:latest"
 Environment="PORT=7778:7778/tcp"
 
 # To override environment variables, use local configuration directory:

@@ -14,7 +14,7 @@
 
 *Note:* This container will be run in the same way as the hellard node, but will not connect to already running containers or processes.
 
-    docker run -v hellard-data:/hellar --rm -it hellarpay/hellard bash -l
+    docker run -v hellard-data:/hellar --rm -it hellarcore/hellard bash -l
 
 You can also attach bash into running container to debug running hellard
 

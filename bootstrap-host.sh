@@ -4,7 +4,7 @@
 #
 set -ex
 
-HELLAR_IMAGE=${HELLAR_IMAGE:-hellarpay/hellard}
+HELLAR_IMAGE=${HELLAR_IMAGE:-hellarcore/hellard}
 
 distro=$1
 shift
@@ -61,7 +61,7 @@ docker volume create --name=hellard-data
 docker run -v hellard-data:/hellar --rm $HELLAR_IMAGE hellar_init
 
 # Start hellard via systemd and docker
-curl https://raw.githubusercontent.com/hellarpay/docker-hellard/master/init/docker-hellard.service > /lib/systemd/system/docker-hellard.service
+curl https://raw.githubusercontent.com/hellarcore/docker-hellard/master/init/docker-hellard.service > /lib/systemd/system/docker-hellard.service
 systemctl start docker-hellard
 
 set +ex
