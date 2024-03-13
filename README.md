@@ -22,7 +22,7 @@ Really Fast Quick Start
 
 One liner for Ubuntu 18.04 LTS machines with JSON-RPC enabled on localhost and adds upstart init script:
 
-    curl https://raw.githubusercontent.com/hellarpay/docker-hellard/master/bootstrap-host.sh | sh -s bionic
+    curl https://raw.githubusercontent.com/hellarcore/hellard/blob/master/bootstrap-host.sh | sh -s bionic
 
 
 Quick Start
