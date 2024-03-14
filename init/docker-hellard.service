@@ -1,6 +1,6 @@
 [Unit]
 Description=Hellard Docker Container
-Documentation=https://github.com/hellarcore/docker-hellard
+Documentation=https://github.com/hellarcore/hellard
 After=network.target docker.socket
 Requires=docker.socket
 
